@@ -17,7 +17,6 @@ const CryptoMainSection = ({setId, searchTerm, setSearchTerm, displayCards, setD
 
     // set URL configuration and fetch data
     async function fetchData() {
-        // const api = "f7b7d878-df88-4ba3-a485-1a3bd49173ea"
         const api = import.meta.env.API_KEY
         let limit = 15
         let offset = 0
