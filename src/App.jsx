@@ -15,8 +15,8 @@ function App() {
     <>
       <Navbar />
       <Routes>
-        <Route path='/' element={<Home />}/>
-        <Route path='/:pageId' element={<CryptoMainSection key={id} setId={setId} searchTerm={searchTerm} setSearchTerm={setSearchTerm} displayCards={displayCards} setDisplayCards={setDisplayCards}/>}></Route>
+        <Route exact path='/' element={<Home />}/>
+        <Route exact path='/:pageId' element={<CryptoMainSection key={id} setId={setId} searchTerm={searchTerm} setSearchTerm={setSearchTerm} displayCards={displayCards} setDisplayCards={setDisplayCards}/>}></Route>
       </Routes>
     </>
   )
