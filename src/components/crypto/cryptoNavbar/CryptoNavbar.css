@@ -1,0 +1,37 @@
+.crypto-navbar .searchbar{
+    border: 1px solid black;
+    border-radius: 50px;
+}
+.crypto-navbar .search-icon {
+    font-size: 30px;
+    color: rgb(0, 0, 0, 0.7);
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 600,
+    'GRAD' 200,
+    'opsz' 20
+}
+.crypto-navbar .searchbar input, 
+.crypto-navbar .searchbar input:focus{
+    outline: none;
+}
+.crypto-navbar .close-button{
+    height: fit-content;
+    width: fit-content;
+    border-radius: 50%;
+}
+.crypto-navbar .close-button:hover{
+    border: 1px solid rgb(0, 0, 0, 0.3);
+    background-color: rgb(0, 0, 0, 0.1);
+}
+.crypto-navbar .grid-icon {
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 20
+}
+.crypto-navbar .grid-icon, 
+.crypto-navbar .table-icon{
+    font-size: 27px;
+}

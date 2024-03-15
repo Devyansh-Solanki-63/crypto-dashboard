@@ -1,0 +1,78 @@
+.home-container{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 50px;
+    overflow: hidden;
+
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+.home-container h1{
+    font-size: 50px;
+    font-weight: bold;
+    color: rgb(63, 63, 63);
+}
+.home-container h1 span{
+    display: inline-block;
+}
+.word_1, .word_2, .word_3, .word_4{
+    letter-spacing: 2px;
+}
+.letter{
+    animation: letterAnimation 0.2s ease-in 0s 1 forwards;
+}
+:root{
+    --valueY: -400px;
+    --space: 60px;
+    --starting-delay: 500ms
+}
+.letter_01{transform: translate(calc(0px - (var(--space) * 9)), var(--valueY)); animation-delay: calc(var(--starting-delay) + (0 * 100ms));}
+.letter_02{transform: translate(calc(0px - (var(--space) * 8)), var(--valueY)); animation-delay: calc(var(--starting-delay) + (1 * 100ms));}
+.letter_03{transform: translate(calc(0px - (var(--space) * 7)), var(--valueY)); animation-delay: calc(var(--starting-delay) + (2 * 100ms));}
+.letter_04{transform: translate(calc(0px - (var(--space) * 6)), var(--valueY)); animation-delay: calc(var(--starting-delay) + (3 * 100ms));}
+.letter_05{transform: translate(calc(0px - (var(--space) * 5)), var(--valueY)); animation-delay: calc(var(--starting-delay) + (4 * 100ms));}
+.letter_06{transform: translate(calc(0px - (var(--space) * 4)), var(--valueY)); animation-delay: calc(var(--starting-delay) + (5 * 100ms));}
+.letter_07{transform: translate(calc(0px - (var(--space) * 3)), var(--valueY)); animation-delay: calc(var(--starting-delay) + (6 * 100ms));}
+.letter_08{transform: translate(calc(0px - (var(--space) * 2)), var(--valueY)); animation-delay: calc(var(--starting-delay) + (7 * 100ms));}
+.letter_09{transform: translate(calc(0px - (var(--space) * 1)), var(--valueY)); animation-delay: calc(var(--starting-delay) + (8 * 100ms));}
+.letter_10{transform: translate(calc(0px - (var(--space) * 0)), var(--valueY)); animation-delay: calc(var(--starting-delay) + (9 * 100ms));}
+.letter_11{transform: translate(calc(0px + (var(--space) * 1)), var(--valueY)); animation-delay: calc(var(--starting-delay) + (10 * 100ms));}
+.letter_12{transform: translate(calc(0px + (var(--space) * 2)), var(--valueY)); animation-delay: calc(var(--starting-delay) + (11 * 100ms));}
+.letter_13{transform: translate(calc(0px + (var(--space) * 3)), var(--valueY)); animation-delay: calc(var(--starting-delay) + (12 * 100ms));}
+.letter_14{transform: translate(calc(0px + (var(--space) * 4)), var(--valueY)); animation-delay: calc(var(--starting-delay) + (13 * 100ms));}
+.letter_15{transform: translate(calc(0px + (var(--space) * 5)), var(--valueY)); animation-delay: calc(var(--starting-delay) + (14 * 100ms));}
+.letter_16{transform: translate(calc(0px + (var(--space) * 6)), var(--valueY)); animation-delay: calc(var(--starting-delay) + (15 * 100ms));}
+.letter_17{transform: translate(calc(0px + (var(--space) * 7)), var(--valueY)); animation-delay: calc(var(--starting-delay) + (16 * 100ms));}
+.letter_18{transform: translate(calc(0px + (var(--space) * 8)), var(--valueY)); animation-delay: calc(var(--starting-delay) + (17 * 100ms));}
+.letter_19{transform: translate(calc(0px + (var(--space) * 9)), var(--valueY)); animation-delay: calc(var(--starting-delay) + (18 * 100ms));}
+.letter_20{transform: translate(calc(0px + (var(--space) * 10)), var(--valueY)); animation-delay: calc(var(--starting-delay) + (19 * 100ms));}
+@keyframes letterAnimation {
+    100% {transform: translate(0, 0); font-size: 50px;}
+}
+.home-container .btn{
+    animation: btnAnim 1.3s ease-in 2.5s 1 forwards;
+    transform: scale(100%) translateY(350px) rotate(0deg);
+}
+@keyframes btnAnim{
+    0% {transform: scale(100%) translateY(350px) rotate(-720deg);}
+    50% {transform: scale(100%) translateY(0px) rotate(0deg);}
+    70% {transform: scale(100%) translateY(0px) rotate(0deg);}
+    80% {transform: scale(120%) translateY(0px) rotate(0deg);}
+    85% {transform: scale(100%) translateY(0px) rotate(0deg);}
+    95% {transform: scale(120%) translateY(0px) rotate(0deg);}
+    100% {transform: scale(100%) translateY(0px) rotate(0deg);}
+}
+@media screen and (max-width: 767px){
+    .letter{
+        animation: none;
+        transform: translate(0px);
+    }
+    .home-container .btn{
+        animation: none;
+        transform: translateY(0px);
+    }
+}

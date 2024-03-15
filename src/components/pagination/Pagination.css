@@ -1,0 +1,10 @@
+.pagination .page-item.active .page-link{
+    cursor: not-allowed;
+    background-color: #6c757d;
+    color: white !important;
+}
+@media screen and (max-width: 450px){
+    .pagination .page-item .page-link{
+        padding: 8px 16px;
+    }
+}

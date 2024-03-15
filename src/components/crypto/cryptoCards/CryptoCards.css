@@ -1,0 +1,28 @@
+.card{
+    position: relative;
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+}
+.card .card-title{
+    margin-bottom: 15px;
+}
+.card .card-text{
+    margin-bottom: 7px;
+    color: rgb(109, 109, 109);
+}
+.card .btn{
+    margin-top: 10px;
+}
+.card .symbol{
+    position: absolute;
+    right: 15px;
+    top: 15px;
+}
+@media screen and (max-width: 380px){
+    .card .card-title .name{
+        font-size: 19px;
+    }
+    .card .card-text{
+        font-size: 15px;
+    }
+}

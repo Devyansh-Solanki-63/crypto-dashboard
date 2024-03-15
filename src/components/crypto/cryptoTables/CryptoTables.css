@@ -1,0 +1,55 @@
+tr{
+    height: 75px;
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+}
+tbody tr{
+    cursor: pointer;
+}
+.tr-hover{
+    background-color: rgba(157, 157, 157, 0.1);
+}
+
+
+
+.table_container_1{
+    min-width: 280px;
+}
+.table-1{
+    width: 100%;
+    box-shadow: 5px 0px 8px -5px rgb(179, 179, 179);
+}
+.table-1 thead .rank{
+    width: 30%;
+}
+.table-1 thead .name{
+    width: 70%;
+}
+.table-1 tbody tr{
+    font-weight: 500;
+}
+.table-1 .symbol{
+    color: rgb(144, 144, 144);
+    margin-left: 5px;
+    font-weight: normal;
+}
+
+
+
+.table_container_2{
+    width: 100%;
+    overflow-x: auto;
+}
+.table_container_2::-webkit-scrollbar{
+    width: 0px;
+}
+.table-2 th, .table-2 td{
+    padding: 0px 30px;
+    white-space: nowrap;
+}
+.table-2 .price{min-width: 40px;  box-sizing: content-box;}
+.table-2 .last_24h{min-width: 85px;  box-sizing: content-box;}
+.table-2 .market_cap{min-width: 90px;  box-sizing: content-box;}
+.table-2 .volume_24h{min-width: 100px;  box-sizing: content-box;}
+.table-2 .supply{min-width: 55px;  box-sizing: content-box;}
+.table-2 .vwap{min-width: 50px;  box-sizing: content-box;}
