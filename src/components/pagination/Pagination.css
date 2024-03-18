@@ -1,7 +1,15 @@
-.pagination .page-item.active .page-link{
+.pagination .page-item.active-light-page-item .page-link{
     cursor: not-allowed;
-    background-color: #6c757d;
-    color: white !important;
+    background-color: #212529 !important;
+    color: #f8f9fa !important;
+}
+.pagination .page-item.active-dark-page-item .page-link{
+    cursor: not-allowed;
+    background-color: #f8f9fa !important;
+    color: #212529 !important;
+}
+.page-item:not(:first-child) .page-link {
+    margin: 0px 0px;
 }
 @media screen and (max-width: 450px){
     .pagination .page-item .page-link{

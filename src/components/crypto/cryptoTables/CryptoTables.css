@@ -17,7 +17,8 @@ tbody tr{
 }
 .table-1{
     width: 100%;
-    box-shadow: 5px 0px 8px -5px rgb(179, 179, 179);
+    /* box-shadow: 5px 0px 5px -5px rgb(179, 179, 179); */
+    box-shadow: 5px 0px 3px -3px rgb(124, 124, 124, 0.5);
 }
 .table-1 thead .rank{
     width: 30%;

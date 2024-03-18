@@ -1,8 +1,13 @@
 import React from 'react'
+import { useContext } from 'react'
+import Context from '../../context/Context'
 
 const MainHeading = () => {
+
+    const {mode, setMode} = useContext(Context)
+
   return (
-    <h1 className='main-heading text-center'>
+    <h1 className={`main-heading text-center text-${mode.text}`}>
         <span className="word_1 mx-2">
             <span className="letter letter_01">W</span>
             <span className="letter letter_02">e</span>

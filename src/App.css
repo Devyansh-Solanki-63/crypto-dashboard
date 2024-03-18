@@ -30,3 +30,6 @@ body::-webkit-scrollbar-thumb {
 .text-red .arrow{
     transform: rotate(180deg);
 }
+input{
+    background-color: transparent;
+}

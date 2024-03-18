@@ -1,6 +1,10 @@
 import React from 'react'
+import { useContext } from 'react'
+import Context from '../../../context/Context'
 
 const CryptoTable2 = ({finalList, getCryptoData, hovered, handleMouseEnter, handleMouseLeave}) => {
+
+    const {mode, setMode} = useContext(Context)
 
     const defineTextColor = (last_24h) => {
         last_24h = last_24h.toString()
@@ -11,7 +15,7 @@ const CryptoTable2 = ({finalList, getCryptoData, hovered, handleMouseEnter, hand
   return (
     <>
         <table className="table-2">
-            <thead className='border-bottom'>
+            <thead>
                 <tr>
                     <th className="price ps-5">Price</th>
                     <th className="last_24h">Last 24h %</th>
@@ -21,7 +25,7 @@ const CryptoTable2 = ({finalList, getCryptoData, hovered, handleMouseEnter, hand
                     <th className="vwap">VWAP</th>
                 </tr>
             </thead>
-            <tbody>                
+            <tbody className={`text-${mode.text} text-opacity-75`}>                
                 { 
                     finalList.map((crypto) => {
                         let data = getCryptoData(crypto)

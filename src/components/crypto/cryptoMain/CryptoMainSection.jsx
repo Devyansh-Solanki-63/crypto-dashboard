@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom'
+import { useParams, useNavigate } from 'react-router-dom'
 import LoadingSpinner from '../../loading/LoadingSpinner'
 import CryptoNavbar from '../cryptoNavbar/CryptoNavbar'
 import CryptoCardContainer from '../cryptoCards/CryptoCardContainer'
@@ -8,19 +8,19 @@ import Pagination from '../../pagination/Pagination'
 import "./CryptoMainSection.css"
 
 const CryptoMainSection = ({setId, searchTerm, setSearchTerm, displayCards, setDisplayCards}) => {
-
-    const {pageId} = useParams()
-
+    
+    let {pageId} = useParams()
+    
     const [loading, setLoading] = useState(true)
     const [cryptoLists, setCryptoLists] = useState([])
+    const navigate = useNavigate()
 
 
     // set URL configuration and fetch data
     async function fetchData() {
         const api = import.meta.env.API_KEY
         let limit = 15
-        let offset = 0
-        if(pageId){ offset = (pageId-1) * 15 }
+        let offset = (pageId-1) * 15
 
         try{
             setLoading(true)
@@ -37,6 +37,9 @@ const CryptoMainSection = ({setId, searchTerm, setSearchTerm, displayCards, setD
         }
     }
     useEffect(() => {
+        if (pageId > 6 || pageId < 1 || isNaN(pageId)) {
+            navigate('/not-found')
+        }
         fetchData()
     }, [pageId])
 

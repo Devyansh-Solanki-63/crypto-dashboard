@@ -1,16 +1,21 @@
 import React from 'react'
+import { useContext } from 'react'
+import Context from '../../../context/Context'
 
 const CryptoTable1 = ({finalList, getCryptoData, hovered, handleMouseEnter, handleMouseLeave}) => {
+
+    const {mode, setMode} = useContext(Context)
+
   return (
     <>
         <table className="table-1">
-            <thead className='border-bottom'>
+            <thead>
                 <tr>
                     <th className="rank">Rank</th>
                     <th className="name">Name</th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody className={`text-${mode.text} text-opacity-75`}>
                 {
                     finalList.map((crypto) => {
                         let data = getCryptoData(crypto)
@@ -28,7 +33,7 @@ const CryptoTable1 = ({finalList, getCryptoData, hovered, handleMouseEnter, hand
                                 onMouseLeave={handleMouseLeave}
                                 onClick={visitWebsite} 
                             >
-                                <td><span className='rank-circle badge bg-dark bg-opacity-75 text-light'>{rank}</span></td>
+                                <td><span className={`rank-circle badge bg-${mode.text} bg-opacity-75 text-${mode.bg}`}>{rank}</span></td>
                                 <td>{name} <span className="symbol">{symbol}</span> </td>
                             </tr>
                         )
