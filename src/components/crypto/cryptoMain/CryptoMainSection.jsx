@@ -18,13 +18,14 @@ const CryptoMainSection = ({setId, searchTerm, setSearchTerm, displayCards, setD
 
     // set URL configuration and fetch data
     async function fetchData() {
-        const api = import.meta.env.API_KEY
+        // const api = import.meta.env.API_KEY
+        const api = "cb92c66df3abad51b1ee1e2094ebb893ff56189c1a63da34920e8298d8a4598c"
         let limit = 15
         let offset = (pageId-1) * 15
 
         try{
             setLoading(true)
-            const url = `https://api.coincap.io/v2/assets?apiKey=${api}&offset=${offset}&limit=${limit}`
+            const url = `https://rest.coincap.io/v3/assets?apiKey=${api}&offset=${offset}&limit=${limit}`
             const data = await fetch(url)
             const jsonData = await data.json()
             const parsedData = await jsonData.data
